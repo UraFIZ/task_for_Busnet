@@ -20,8 +20,9 @@ class cards extends Component {
 
   render() {
     const { data } = this.state;
-    const myCard = data && data.rides.lenght > 0 ? data.rides.map(item => (
+    const myCard = data ? data.rides.map(item => (
       <Card
+        key={item.driver}
         data={item}
       />
 
