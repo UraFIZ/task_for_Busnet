@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
-import Grid from '@material-ui/core/Grid'
-import purple from '@material-ui/core/colors/purple';
 
-const accent = purple['A200'];
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 
 class header extends Component {
   render() {
     return (
       <div>
-        <Grid container spacing={24}>
-          <Grid item xs={12}>
-            Tasting task for developer
-        </Grid>
-        </Grid>
+        <AppBar position="static" >
+          <Toolbar background-color="#4caf50">
+            <Typography variant="h6" color="inherit">
+              Tasting task for developer
+          </Typography>
+          </Toolbar>
+        </AppBar>
       </div>
     )
   }
