@@ -8,7 +8,7 @@ import { Grid, Paper } from '@material-ui/core';
 class card extends Component {
 
   render() {
-    const { data } = this.props;
+
     return (
       <Grid container>
         <Grid item sm={6}>
