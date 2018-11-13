@@ -53,7 +53,7 @@ class Cards extends Component {
           ) : <div>loading...</div>}
         </Grid>
         <Grid item sm={6}>
-          {this.state.selectedItem && <CardRight style={display}
+          {this.state.selectedItem && <CardRight
             activeId={this.state.activeId}
             vehicleTypes={myResponse.vehicleTypes}
             selectedItem={this.state.selectedItem}
