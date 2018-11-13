@@ -9,8 +9,8 @@ class header extends Component {
   render() {
     return (
       <div>
-        <AppBar position="static" >
-          <Toolbar background-color="#4caf50">
+        <AppBar position="static" style={{ backgroundColor: "#4caf50", marginBottom: "20px" }} >
+          <Toolbar>
             <Typography variant="h6" color="inherit">
               Tasting task for developer
           </Typography>
