@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 
-class header extends Component {
+class Header extends Component {
   render() {
     return (
       <div>
@@ -20,4 +19,4 @@ class header extends Component {
     )
   }
 }
-export default header
+export default Header

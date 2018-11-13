@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Cards from './components/cards/cards'
-import Header from './components/leyout/header'
+import Cards from './components/cards/Cards'
+import Header from './components/leyout/Header'
 
-import './App.css';
 
 class App extends Component {
   render() {

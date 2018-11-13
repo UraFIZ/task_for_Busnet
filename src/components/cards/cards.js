@@ -1,39 +1,35 @@
 import React, { Component } from 'react';
-import Card from './card'
+import Card from './Card'
 
-class cards extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      data: null
-    }
+class Cards extends Component {
+  state = {
+    data: null
   }
 
   componentWillMount() {
     fetch('./data.json')
       .then(response => response.json())
       .then(data => this.setState({ data }));
-
   }
 
 
   render() {
     const { data } = this.state;
-    const myCard = data ? data.rides.map(item => (
-      <Card
-        key={item.driver}
-        data={item}
-      />
 
-    )
-    ) : <div>loading...</div>
     return (
       <div>
-        {myCard}
+        {data ? data.rides.map(item => (
+          <Card
+            key={item.driver}
+            data={item}
+          />
+
+        )
+        ) : <div>loading...</div>}
+
       </div>
     );
 
   }
 }
-export default cards
+export default Cards
