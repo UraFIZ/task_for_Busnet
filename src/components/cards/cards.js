@@ -2,16 +2,9 @@ import React, { Component } from 'react';
 import CardRight from './CardRight'
 import CardLeft from './CardLeft'
 import { Grid } from '@material-ui/core';
-import { oneOf } from 'prop-types';
 
-let display = {
 
-  display: "flex",
-  justifyContent: "space-around",
-  marginBottom: "20px",
-  marginLeft: "30px",
-  marginRight: "30px"
-}
+
 class Cards extends Component {
   state = {
     data: null,
@@ -24,8 +17,6 @@ class Cards extends Component {
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }
-
-
 
   onItemClick = (item) => {
     console.log(item)
@@ -52,6 +43,7 @@ class Cards extends Component {
           )
           ) : <div>loading...</div>}
         </Grid>
+
         <Grid item sm={6}>
           {this.state.selectedItem && <CardRight
             activeId={this.state.activeId}
@@ -59,8 +51,6 @@ class Cards extends Component {
             selectedItem={this.state.selectedItem}
           />}
         </Grid>
-
-
       </Grid>
     );
 
